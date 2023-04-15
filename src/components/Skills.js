@@ -42,7 +42,7 @@ function Skills() {
 			<Skill name="ReactJS" x="0vw" y="12vw"/>
 			<Skill name="NextJS" x="-20vw" y="-15vw"/>
 			<Skill name="SQL" x="16vw" y="-11vw"/>
-			<Skill name="Office" x="-20vw" y="2vw"/>
+			<Skill name="Office" x="-2vw" y="25vw"/>
 			<Skill name="Tailwind CSS" x="-25vw" y="18vw"/>
 			<Skill name="Figma" x="18vw" y="18vw"/>
 			<Skill name="Web Design" x="32vw" y="-5vw"/>
