@@ -24,7 +24,7 @@ const FeaturedArticle = ({img,title,time,summary,link})=>{
 			<div className='absolute top-0 -right-3 -z-10 w-full h-[103%] rounded-[2rem] bg-dark 	rounded-br-3xl dark:bg-light'/>
 
 			<Link href={link} target='_blank' className='w-full cursor-pointer overflow-hidden rounded-lg inline-block'>
-				<FramerImage src={img} alt={title} className='w-full h-auto' 
+				<FramerImage src={img} alt={title} className='w-full h-auto xs:text-lg' 
 				whileHover={{scale:1.05}}
 				transition={{duration:.2}}
 				priority
@@ -69,7 +69,7 @@ const MovingImg = ({title,img,link})=>{
 			onMouseLeave={handleMouseLeave}
 		>
 			<h2 className='capitalize text-xl font-semibold hover:underline underline-offset-2'>{title}</h2>
-			<FramerImage ref={imgRef} src={img} alt={title} className='z-10 w-96 h-auto hidden absolute rounded-lg'
+			<FramerImage ref={imgRef} src={img} alt={title} className='z-10 w-96 h-auto hidden absolute rounded-lg md:hidden'
 			style={{x:x, y:y}}
 			initial={{opacity:0}}
 			whileInView={{opacity:1, transition:{duration:0.3}}}
@@ -83,14 +83,14 @@ const Article = ({img,title,date,link})=>{
 
 	return(
 		<motion.li className='relative w-full p-4 pt-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4
-		dark:bg-dark dark:text-light dark:border-light'
+		dark:bg-dark dark:text-light dark:border-light sm:flex-col'
 		initial={{y:200}}
 		whileInView={{y:0}}
 		transition={{duration:0.5, ease:"easeInOut"}}
 		viewport={{once:true}}
 		>
 			<MovingImg img={img} title={title} link={link} />
-			<span className='text-primary dark:text-primaryDark font-semibold pl-4'>{date}</span>
+			<span className='text-primary dark:text-primaryDark font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm'>{date}</span>
 		</motion.li>
 	)
 }
@@ -105,8 +105,8 @@ function articles() {
 			</Head>
 			<main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
 				<Layout className='pt-16'>
-					<AnimatedText text="Words Can Change The World!" className='mb-16' />
-					<ul className='grid grid-cols-2 gap-16'>
+					<AnimatedText text="Words Can Change The World!" className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl' />
+					<ul className='grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16'>
 						<FeaturedArticle 
 						title={"Build A Custom Pagination Component In Reactjs From Scratch"}
 						summary={"Learn how to build a custom pagination component in ReactJS from scratch. Follow this step-by-step guide to integrate Pagination component in your ReactJS project."}
