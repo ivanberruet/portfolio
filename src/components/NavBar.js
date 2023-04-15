@@ -69,7 +69,7 @@ const CustomMobileLink = ({href,title,className="",toggle}) =>{
 }
 
 function NavBar() {
-	const [isOpen, setIsOpen] = useState(true)
+	const [isOpen, setIsOpen] = useState(false)
 
 	const handleClick = () => {
 		setIsOpen(!isOpen)
